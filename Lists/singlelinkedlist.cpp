@@ -28,17 +28,9 @@ node *single_llist::createNode(int value)
 {
     node *temp;
     temp = new(node);
-    if (temp == NULL)
-    {
-        cout<<"The list is empty"<<endl;
-        return 0;
-    }
-    else
-    {
-        temp->info = value;
-        temp->next = NULL;
-        return temp;
-    }
+    temp->info = value;
+    temp->next = NULL;
+    return temp;
 }
 
 
