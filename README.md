@@ -1,3 +1,3 @@
 # Cpp-Programs
 
-A list of C++ programs about data structures.
+A list of C++ programs about Data Structures and Algorithms.
