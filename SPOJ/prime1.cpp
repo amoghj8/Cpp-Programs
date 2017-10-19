@@ -36,7 +36,7 @@ int main()
   for (size_t i = 0; i < t; i++) {
     cin>>m>>n; // input the two integers
     int limit = sqrt(n);
-    for (size_t i = 0; i < 100000; i++) {
+    for (size_t i = 0; i <= 100000; i++) {
       prime2[i] = 1;
     }
     for (size_t i = 0; (i < 3401) && (primes[i]<=limit); i++) {
@@ -45,7 +45,7 @@ int main()
         prime2[k] = 0;
       }
       if(m%p==0)
-        prime2[k] = 0;
+        prime2[0] = 0;
     }
     for (int j=0; j<=n-m; j++)
 		{
@@ -57,4 +57,5 @@ int main()
 					cout<<j+m<<"\n";
 		}
   }
+  return 0;
 }
