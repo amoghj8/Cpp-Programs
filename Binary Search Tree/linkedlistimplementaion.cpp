@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 
 using namespace std;
 
@@ -68,6 +68,15 @@ int FindMax(Node* root)
   return root->data;
 }
 
+int FindHeight(Node *root)
+{
+  if(root==NULL)
+    return -1;
+  int leftheight = FindHeight(root->left);
+  int rightheight = FindHeight(root->right);
+  return max(leftheight,rightheight)+1;
+}
+
 int main()
 {
   Node* root = NULL;
@@ -95,5 +104,7 @@ int main()
     cout<<FindMax(root)<<"\n";
   else
     cout<<"Tree is empty\n";
+ //Height of Tree
+  cout<<"The Height of the tree is: "<<FindHeight(root)<<"\n";
   return 0;
 }
