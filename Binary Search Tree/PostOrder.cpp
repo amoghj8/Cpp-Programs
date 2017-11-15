@@ -28,13 +28,13 @@ Node* Insert(Node* root,int data)
   return root;
 }
 
-void PreOrder(Node *root)
+void PostOrder(Node *root)
 {
   if (root==NULL)
     return;
+  PostOrder(root->left);
+  PostOrder(root->right);
   cout<<root->data<<"\t";
-  PreOrder(root->left);
-  PreOrder(root->right);
 }
 
 int main()
@@ -45,6 +45,6 @@ int main()
   root = Insert(root,30);
   root = Insert(root,9);
   root = Insert(root,11);
-  PreOrder(root);
+  PostOrder(root);
   return 0;
 }
